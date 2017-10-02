@@ -2,3 +2,6 @@
 *tmp
 log.txt
 *.txt
+#tous les fichiers caches
+cache/*
+
