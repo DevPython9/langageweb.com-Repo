@@ -1,0 +1,547 @@
+/* ---------------------Feuille de style pour apprendre-web----------------------- ------------*/
+           /* En css, d'une façon générale, la régle qui vient après est prioritaire */
+                /* --------------------------Note----------------------------*/
+    1/Penser à simplifier votre code avec jquery en ajoutant par exemple des balises et des classes à des endroits répétitifs
+    2/Proposez bouton "ajouter une vidéo" dans chaque lien du header"
+    3/Ecourter la liste des formations et mettez actu web ou pub de site ou école informatiqu
+    4/Penser à utiliser SASS et autoprefixer pour organiser et prefixer votre code
+    5/penser à google analytic et seo pour optimiser votre référencement
+    6/penser à promouvoir votre site dans les forums dev etc
+    7/penser à créer des repo sur git pour versionner votre code
+    8/Penser à créer une chaine youtube " tube infomatique d'autres developeur"
+    9/Penser à faire un backup de votre site et à choisir un bon hébergeur
+    10/penser à créer un forum et un espace membre
+    11/ Votre nom de site: langageweb, ressourceweb, meilleurstutos...
+    12/Installer et me familiariser avec ubuntu
+    13/ Pour la déclaration des mediaqueries il a fallut que je remplace l'option screen par all pour que ça fonctionne.    
+    14/A partir de 768 px de resolution, les videos ont une forme bizarrre (surtout au niveau hauteur), coment s'en sortir avec mediaqueries ? avec bootstrap je reduis mon row a deux voir a une video mais avec flexbox comment faire?
+/* ------------------------------------------------------------------------------------------------------------*/
+        /* --------------------------Importation police---------------------------------- */
+/*note: penser a regrouper toutes vos polices dans un seul @import avec googlefont*/
+@import url('https://fonts.googleapis.com/css?family=Courgette'); 
+@import url(https://fonts.google<hr/>apis.com/css?family=Indie+Flower);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url('https://fonts.googleapis.com/css?family=Acme');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Acme|Dancing+Script');
+@import url('https://fonts.googleapis.com/css?family=Germania+One');
+             
+                      /* *********** END ******* */
+
+/*-------Pour mettre toutes les dimensions dans la dimensions prédéfinies-------*/
+*{
+  box-sizing: border-box;
+}
+        /*------------------------------END---------------------------------*/
+/***
+Pour tous les types d'écrans, si la largeur de la fenêtre ne dépasse pas 1024 px, alors exécuter les règles CSS suivantes 
+***/
+@media all and (max-width: 980px) {
+     .wrapper {
+       width:auto;
+     }
+     header{
+       width:auto;
+       text-align:left;
+}
+
+    header li {
+       display:block; /*?*/
+ }
+    header li a{
+  padding:6px; 
+}
+ .logo {
+display:none;
+}
+i.material-icons {
+  display:none;
+}
+div.wrapper h3 {
+  display:none;
+}
+span.chaine-animee {
+   display:none;
+}
+
+  aside {
+    display:none;
+}
+.bloc_langage li {
+width:auto;
+}
+
+ .bloc_langage li a {
+display:block;
+color:white; /*midnightblue;*/
+text-decoration: none;
+font-family:'Courgette', cursive;
+}
+footer {
+width:auto;
+background:linear-gradient(to bottom,blue,white);
+}
+footer .row {
+display:none;
+}
+  }
+@media all and (max-width: 700px){
+   .bloc_langage {
+   display:none;
+}
+}
+/*----------- Début Paramétrage du doc html et de la balise body------*/ 
+html {
+  margin:0;
+  /*display:table; Pour pouvoir bien placer le footer en mettant un height 1 pour ce dernier*/
+  min-height:100%;
+  font-size:100%; /*16px = 1em = 100%  = 12pt. font-size 100% cest pour coriger ls bugs de internet explorer qui supporte mal l'unité em*/
+  /* overflow:hidden; avec cette propriété le chargement de la page est effectué à moitié */
+}
+body{
+  letter-spacing:2px;
+  word-spacing:5px;
+  min-height:100%;
+  margin:0;
+  /*display:table; si je le mets pas le footer ne va pas prendre toute la largeur*/
+  font-size:1.2em; /*soit la taille par défaut du navigateur * 1.5fois  */
+  font-weight: 800;
+  line-height: 1.5; /*hauteur de ligne*/
+  /*font-family: 'Patrick Hand', cursive; Penser à utiliser des polices génériques plus proches des polices spéciales déclarées pour par le  cas où la police spécifiée n'est pas trouvée dans l'ordi du visiteur*/
+  background:radial-gradient(circle at center,grey,#fff,te7e7e7); 
+  /*font-family:'Dancing Script','Abril Fatface',cursive;*/
+  }
+
+       /*----------------------END----------------------*/
+/*-------------Paragraphe et titre----------------------------------*/
+     p{
+   text-indent:12px;
+   }
+  p, li {
+	line-height: 3;
+	letter-spacing: 1px;
+        list-style-type: disc; /*avec la valeur:none les liens de l'aside sont retrécie.*/
+}
+span.titrelogo {
+font-family: 'Lobster', cursive;
+font-size:2rem;
+}
+span:first-letter { color: red; }   
+span.titrelogo:nth-child(8) { color: yellow; }
+span.titrelogo:nth-child(9) { color: green; }
+span.titrelogo:last-letter {color:red}
+/*h3: deux 1er titres du homepage*/
+h3:first-letter,
+h1:first-letter{   
+  font-family:'Indie Flower';
+  font-size:3em;
+}
+  i.material-icons {
+   text-align:center;
+   vertical-align:middle;
+}    h3 {
+padding:15px;
+/*border:2px solid black;*/
+font-family:"Indfie Flower",Lobster,cursive;
+border-radius:50%;
+hyphens: auto; /*une alternative à overflow-wrap contre les dépassements de texte*/
+text-align:right;
+max-width:60%;
+word-wrap:break-word;
+heigdht:auto;
+font-size:1.5em;
+margin-bottom:15px;
+}
+/*h1: titre principal des autres pages*/
+h1 {
+  font-size:2em;
+  text-align: center;
+  /*Positionner le titre et le mettre en forme: */
+  margin: 0;
+  padding: 20px 0;    
+  color: #000; #00539F;
+  text-shadow: 6px 6px 10px #333;
+  word-spacing: 20px;
+}
+.chaine-animee {
+  font:normal italic;
+  font-familly:"Courgette",cursive,sans-serif;
+  color:blue;
+}
+
+
+/*--2-------------TOP BAR: Réglages des liste ul et leurs liens a ------*/
+  header {
+   margin:0;
+   padding:0;
+}
+  header ul {
+  list-style-type:none;
+  margin:0;
+  padding:0;
+  width:100%;
+  z-index:9999;
+  position:fixed; top:0;
+  border-bottom: 15px solid #c3e88d; /* #347f2b=green;  15px solid ; la bordure du menu de couleur verte*/
+  overflow:hidden;
+  background:#1d2d3e;#1b1d1f; /* #111111;#404852 (très beau noir); #616161; #5f5f5f; #ddd;*/
+}
+header li {
+  float:left;
+  list-style-type:none /*le list-style-type:none; sur le ul ne produit aucun effet?*/
+}
+
+header li a.home {
+display:inline-block;
+background:#c3e88d;  /*il se colore en bleue mais pas sur le background et ya tjr des soulignement sur les liens?*/
+color:white;
+/*border: 10px solid transparent;
+border-image: url(icones/homeg.png) 30 round;
+position: relative;*/
+width:90px;
+height:90px;
+position:relative;/*sinon pas de deplacement top, bottom ...*/
+padding: 12px 10px 12px 32px;
+font-size:20px; 
+text-decoration: none;
+animation: home 2s linear infinite  alternate;
+}
+@keyframes home {
+    0%   {background:linear-gradient(to right, white,green,white); left:0px; top:0px;}
+    15%   {background:fushia; left:0px; top:0px;}
+    30%  {background:radial-gradient(circle at center, blue,silver,blue); left:0px; top:30px}
+    45%  {background:linear-gradient(to bottom, orange,blue,orange); left:0px; top:30px}
+    70%  {background:black; left:0px; top:30px}
+    100%  {background:radial-gradient(circle at center, tan,blue,tan); left:0px; top:0px;}
+}
+/*les autres liens du header*/
+header  a:not(.home) {
+  display:inline-block;
+  color:#d42d2d; #555;
+  padding:9px 20px 0 20px; 
+  font: italic small-caps bold 1.3rem/150% Arial, Helvetica, sans-serif; 
+  z-index:99999;
+  text-shadow: -5px 1px 1px rgba(255,255,255,0.3), 1px 1px 1px #555;
+  text-decoration: none;
+  margin:15px 13px 7px 12px;
+  background: tan; 
+  border-bottom:15px solid rgba(128,100,128,0.6);
+  border-radius:6px;
+  transition: width 1s,transform 1s; /*effet transition sur le width et inclinaison de qq degré avec transform lors du survol définit dans la règle ci-dessous */
+  
+}
+header a:hover:not(.home) {
+ background: lightgrey; 
+  color:#d57669;
+  transform:rotate(-2deg); /*rotation incomplète de 2 degré dans le sens contraire des aiguilles d'où le signe -*/
+  border:none;
+  padding:15px;
+  text-decoration: none;
+  
+ }
+/*---Effet sur les liens a ----(l'ordre: a:hover peut venir après a:link and a:visited in the CSS definition in order to be effective! a:active MUST come after a:hover in the CSS definition in order to be effective! Pseudo-class names are not case-sensitive.)*/
+
+/*-----------------------Fin réglage de l'entete-------------*/
+
+/*------------------Réglage  des pages autre que le homepage (index.php)-----------------*/
+
+/*--3--------------Paramétrage du wrapper/main/aside/input recherche-------------*/
+.wrapper {
+    width:80%;
+    height:auto;
+    margin: 20px auto;
+    padding:10px;
+    background-color:#faf8ef; /*#f3f3f5; #f8f8f8; #eee; #FF9500;*/
+    border: 1px solid #eee; /* #FF9500;*/
+    text-align: left;
+    z-index:-1;
+    font-weight:400;
+}
+/*----Aside du homepage et input recherche----*/
+aside {
+width:25%;
+float:right;
+top:300px;
+right:25px;
+}
+.recherche {
+margin:10px;
+}
+input {
+padding:15px;
+border-radius:50%;
+margin-bottom:20px;
+margin-left:-90px;
+outline:none;  /*a supprimé l'outline bleue qui apparaissait lors d'un click dans l'input*/
+}
+input:focus{
+color:#FAAC00;
+}
+.recherche .material-icons {
+cursor:pointer;
+background:linear-gradient(to right,gray,green,blue);
+color:white;
+padding:7px;
+}
+/* ---------Réglage du container des pages autres que la homepage (index)-------------*/
+.container {
+  width:100%;
+  margin:auto;
+  z-index:1; /*du coup tous les élement passeront desormais en dessous du header. effet contraire si on avais pas mis*/
+}
+/**************  END  ************************/
+
+/*--------3-1-----Bloc carré qui regroupe les langage dans index.html*/
+ ul.bloc_langage {
+float:left;
+background: #8d6e63; /*lightgray; rgba(255,255,255,0.1); /*#f9f9f9;*/
+list-style-type: none;
+width:300px;
+padding: 30px;
+margin-right:15px;
+border:10px solid silver;
+border-radius:25px 0 25px 0;
+
+}
+.bloc_langage li {
+list-style-type:none;
+float:left;
+}
+
+ .bloc_langage li a {
+display:block;
+color:white; /*midnightblue;*/
+text-decoration: none;
+font:800 2rem italic;
+padding:13px 20px;
+float:left;
+font-family:'Courgette', cursive;
+}
+
+/*-----------End ------------*/
+
+/*--------Réglage des sections et des boutons bouton "lire la suite"-----*/
+section {
+ margin:20px;
+}
+ section button .btn_html {
+  display: inline-block;
+  cursor: pointer;
+  text-align:center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color:#4CAF50;
+  border: 1px solid ;
+  border-radius: 30px;
+  box-shadow: 0 9px #999;
+}
+
+section button:hover{
+background:radial-gradient(circle at center,gray,tan,white); /* #3e8e41;*/
+color:white;
+}
+section a:hover{
+text-decoration:none;
+color:white;
+}
+
+/*section button .btn_html:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform:translateY(4px);
+  outline:none;
+}*/
+section button a{
+  display:inline-block;
+  padding:5px;
+  font-family:"Indie flower",cursive;
+}
+ /*les icones colorés à côté des titres de langages de la page home*/
+span.icone_langage {
+float:left;
+background:radial-gradient(ellipse farthest-corner at 45px 45px , #00FFFF 0%, rgba(100,120, 200, 0) 50%, #0000FF 95%);
+display:bloc;
+padding:15px 15px;
+width:100px;
+font-size:25px; 
+margin-left:90px;
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=12, Direction=349, Color=#9D52FF)";/*IE 8*/
+-moz-box-shadow: -15px -3px 12px 3px #9D52FF;/*FF 3.5+*/
+-webkit-box-shadow: -15px -3px 12px 3px #9D52FF;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+box-shadow: -15px -3px 12px 3px #9D52FF;/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=12, Direction=135, Color=#9D52FF); /*IE 5.5-7*/
+}
+/*-------Paramétrage de l'Aside formation------------*/
+.formation {
+padding:8px; 
+border:1px solid black;
+background:#f1f1f1;
+margin-bottom:25px;
+max-width:98%;
+}
+.formation ul {
+list-style-type:none;
+margin:0;
+padding:0;
+overflow:hidden;
+height:auto;
+background:#edeff0;
+}
+.formation ul li {
+display:list-item;
+text-align: -webkit-match-parent;
+}
+.formation  a{
+font-weight: bold;
+color: bluesky;
+display:block;
+font:800 1.2em italic;
+padding:7px 11px;
+margin-bottom:5px;
+text-align:center;
+border-bottom: 1px solid black;
+border-radius:24px;
+text-decoration:none;
+background: linear-gradient(#cbc7bf 15%,bisque 70%,#cbc7bf 15%);
+transition:width , transform 2s;
+}
+.formation ul li a:hover {
+background:radial-gradient(circle at center, red 0, blue, maroon 100%);
+color:white;
+font-size:1.3em;
+border:2px solid black;
+border-radius:36px;
+padding:4px 7px;
+margin-bottom:12px;
+height:50px;
+width:97%;
+transform:rotate(0.4deg);
+}
+.formation p.active {
+background: linear-gradient(#939591,green,white);
+color:white;
+font:800 1.5em italic;
+padding:8px 12px;
+}
+.formation ul li a:last-child {
+border-bottom:none;
+}
+
+/*------------------------ END ---------------------------*/
+
+/* ------------------------ Paramétrage VideoTube avec Flexbox ---------------------- */
+ .flexbox_container{
+   display:flex;
+   max-width:80%;
+   flex-flow: row wrap;
+   justify-content:center;  
+   height:auto;
+   margin:auto;
+   padding:30px;
+   box-sizing:border-box;
+   background:radial-gradient(circle at center,#cbc7bf 0,#eee 40%,bisque 75%,#cbc7bf 100%);
+   border:15px solid bisque;
+   boder-radius:20%;
+   -webkit-align-content: center;
+    align-content: center;
+}
+ .item{
+   /*width:calc(21%-3rem); ne veut pas s'appliquer*/
+   width:30%;
+   position:relative;
+   color:#1d1d1d;
+   background:linear-gradient(to right,bisque,#279,bisque);/*ne marche pas si tu met: background-color*/
+   text-align:center;
+   /*border:10px solid white;*/
+  /* border-radius:20px;*/
+   height:auto;
+   margin-right:15px;
+   margin-bottom:0.3rem;
+   text-decoration:none; 
+  }
+div.item img {
+   width:100%;
+   min-height:180px;
+}
+div.item:hover {
+border:5px solid white;
+border-radius:15px;
+cursor:pointer;
+text-decoration:none;
+} 
+div.item:hover img{
+border:5px solid olive;
+}
+.description {
+    display:block;
+    padding: 15px;
+    margin-top:15px;
+    font-family: fantasy;
+    color:white; coral;
+    /*font-family:'Lobster','Dancing Script','Abril Fatface', cursive;*/
+    text-align: center;
+    letter-spacing:2px;
+    line-height:1.5;
+    cursor:default;
+    /*color:blueviolet;*/
+    background:#1d2d3e; bisque;
+    word-wrap: break-word;
+    border:1px solid white; border-radius:10px;
+    font: bold  blueviolet; /*si je rajoute la taille dans le font ma font-family quelques lignes plus n'aura plus d'effets*/
+    text-decoration:none;/*si la meme propriete est apppliqué que sur l'élément parent "item" ça ne marchera pas. on verra toujours des soulignement lors du hover*/
+ }
+.description:hover {
+   color:white;
+   text-decoration:none;
+}
+/*.description:hover {
+  text-decoration:none;
+  background:bisque;
+  color: coral;
+  border:3px solid white;
+}*/
+ 
+/* ---------------------FIN video_box ---------------*/
+
+/* -------------Footer --------------------*/
+
+   footer{
+  /*display:table-row;*/
+  height:auto;
+  background-color:#dedede; #f2f2f2; #1d1d1b; #f1f1f1; #939591=939591=lightslategray; #353b47; #313131; #cbc7bf; #8c8c8c;
+  color:white;
+  padding:40px;
+  min-width:100%;
+  margin-top:20px;
+  font-size:1.8em;
+  font-weight:bold;
+}
+   footer .row {
+min-width:100%;
+margin:0 auto;}
+  .imgfooter {
+height:20px;
+text-align:right;
+padding:5px;
+}
+  footer ul {
+overflow:hidden;
+list-style-type:none;
+margin:0;
+padding:20px;
+text-align:center;
+}
+
+  footer ul li a {
+display:block;
+color:#46404c;
+font-size:17px;
+height:60px;
+text-align:right;
+text-decoration:none; 
+margin-right:10px;                                        
+}
+.footerdiv a {
+font-family:'Lobster','Dancing+Script',cursive;
+}
