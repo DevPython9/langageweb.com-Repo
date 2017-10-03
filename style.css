@@ -70,6 +70,10 @@ span.chaine-animee {
 .bloc_langage li {
 width:auto;
 }
+/* video */
+.item {
+    width:100%;
+}
 
  .bloc_langage li a {
 display:block;
@@ -139,7 +143,8 @@ h1:first-letter{
   i.material-icons {
    text-align:center;
    vertical-align:middle;
-}    h3 {
+}    
+h3 {
 padding:15px;
 /*border:2px solid black;*/
 font-family:"Indfie Flower",Lobster,cursive;
@@ -232,10 +237,9 @@ header  a:not(.home) {
 }
 header a:hover:not(.home) {
  background: lightgrey; 
-  color:#d57669;
+  color:darkslategray; #d57669;
   transform:rotate(-2deg); /*rotation incomplète de 2 degré dans le sens contraire des aiguilles d'où le signe -*/
-  border:none;
-  padding:15px;
+  border-bottom:10px solid rgba(28,100,128,0.6);
   text-decoration: none;
   
  }
