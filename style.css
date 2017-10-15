@@ -88,7 +88,7 @@ background:linear-gradient(to bottom,blue,white);
 footer .row {
 display:none;
 }
-  }
+  
 @media all and (max-width: 700px){
    .bloc_langage {
    display:none;
