@@ -1,0 +1,40 @@
+/***
+Pour tous les types d'écrans, si la largeur de la fenêtre ne dépasse pas 1024 px, alors exécuter les règles CSS suivantes 
+***/
+@media screen and (max-width:980px) {
+     .wrapper {
+       width:auto;
+     }
+     header{
+       width:auto;
+       text-align:left;
+}
+    header li {
+       display:block;
+ }
+    header li a{
+  display:block;
+  color:#d57669;
+  padding:6px; 
+  font: italic small-caps bold 1.3rem/150% Arial, Helvetica, sans-serif; 
+  z-index:99999;
+  text-decoration: none;  
+}
+  aside {
+    display:none;
+}
+.bloc_langage li {
+width:auto;
+}
+
+ .bloc_langage li a {
+display:block;
+color:white; /*midnightblue;*/
+text-decoration: none;
+font-family:'Courgette', cursive;
+}
+footer {
+width:auto;
+
+}
+  
