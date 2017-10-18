@@ -2,6 +2,9 @@
 <html lang="fr" xmlns:og="http://ogp.me/ns#">
 <head>
 	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	    <!-- pk la balise <meta http-equiv=X-UA-Compatible....>? À la base, le mode de compatibilité est prévu pour pouvoir faire fonctionner les vieux sites qui ont été conçus à la mode du tag soup et des tableaux de présentation. Ces derniers se fichaient bien du respect des standards (triste époque du « optimisé pour IE  »).
            Idéalement, la possibilité d'utiliser ce mode devrait être laissée, toutefois, il est parfois pénible de chercher pendant une heure ce qui peut ne pas fonctionner chez un utilisateur alors que le site a été conçu dans les règles de l'art (comprenez en respectant les standards, testé sur des versions d'Internet Explorer raisonnablement récentes).
          Toutefois, il est possible d'interdire cette possibilité, et de plusieurs manières :
@@ -18,7 +21,9 @@
         Pour vous assurer que votre page s'affichera sans zoom, vous pouvez utiliser la propriété inital-scale pour définir le zoom par défaut.
         En mettant l'échelle à 1, on s'assure qu'aucun zoom ne sera fait à l'affichage de la page.
         Si vous souhaitez empêcher tout zoom de la part de l'utilisateur, vous pouvez définir la propriété maximum-scale à 1 afin d'empêcher tout redimensionnement. *d'info: voir http://paulund.developpez.com/tutoriels/html/metatag-viewport/-->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="language" content="com,fr" />
+        <meta name="copyright" content="//langageweb.com" />
+        <meta name="author" content="langageweb.com" />
         <!-- Global Site Tag (gtag.js) - Google Analytics: Google me demande de mettre ces lignes de code entre les balises HEAD de mon site pour activer l'analitic. On va mettre le code dans un fichier php séparé -->
         <?php require_once 'google_analytic.php'; ?>
         <!-- Une feuille de styles de base pour bien démarrer vos projets:knass avec alsecration-->
