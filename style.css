@@ -34,66 +34,8 @@
 }
         /*------------------------------END---------------------------------*/
 /***
-Pour tous les types d'écrans, si la largeur de la fenêtre ne dépasse pas 1024 px, alors exécuter les règles CSS suivantes 
+Pour tous les types d'écrans, si la largeur de la fenêtre ne dépasse pas 980 px, alors exécuter les règles CSS suivantes : (voir feuille de style mediaquries.css séparés du style.css)
 ***/
-@media all and (max-width: 980px) {
-     .wrapper {
-       width:auto;
-     }
-     header{
-       width:auto;
-       text-align:left;
-}
-
-    header li {
-       display:block; /*?*/
- }
-    header li a{
-  padding:6px; 
-}
- .logo {
-display:none;
-}
-i.material-icons {
-  display:none;
-}
-div.wrapper h3 {
-  display:none;
-}
-span.chaine-animee {
-   display:none;
-}
-
-  aside {
-    display:none;
-}
-.bloc_langage li {
-width:auto;
-}
-/* video */
-.item {
-    width:100%;
-}
-
- .bloc_langage li a {
-display:block;
-color:white; /*midnightblue;*/
-text-decoration: none;
-font-family:'Courgette', cursive;
-}
-footer {
-width:auto;
-background:linear-gradient(to bottom,blue,white);
-}
-footer .row {
-display:none;
-}
-  
-@media all and (max-width: 700px){
-   .bloc_langage {
-   display:none;
-}
-}
 /*----------- Début Paramétrage du doc html et de la balise body------*/ 
 html {
   margin:0;
@@ -130,7 +72,7 @@ span.titrelogo {
 font-family: 'Lobster', cursive;
 font-size:2rem;
 }
-span:first-letter { color: red; }   
+span:first-letter { color: red; }
 span.titrelogo:nth-child(8) { color: yellow; }
 span.titrelogo:nth-child(9) { color: green; }
 span.titrelogo:last-letter {color:red}
@@ -153,7 +95,7 @@ hyphens: auto; /*une alternative à overflow-wrap contre les dépassements de te
 text-align:right;
 max-width:60%;
 word-wrap:break-word;
-heigdht:auto;
+height:auto;
 font-size:1.5em;
 margin-bottom:15px;
 }
@@ -164,14 +106,14 @@ h1 {
   /*Positionner le titre et le mettre en forme: */
   margin: 0;
   padding: 20px 0;    
-  color: #000; #00539F;
+  color: #000; 
   text-shadow: 6px 6px 10px #333;
   word-spacing: 20px;
 }
 .chaine-animee {
   font:normal italic;
-  font-familly:"Courgette",cursive,sans-serif;
-  color:blue;
+  font-family:"Courgette",cursive,sans-serif;
+  color:coral;
 }
 
 
@@ -211,13 +153,21 @@ font-size:20px;
 text-decoration: none;
 animation: home 2s linear infinite  alternate;
 }
-@keyframes home {
-    0%   {background:linear-gradient(to right, white,green,white); left:0px; top:0px;}
+@-webkit-keyframes home {
+    0%   {background:-webkit-gradient(linear, left top, right top, from(white),color-stop(green),to(white));background:-webkit-linear-gradient(left, white,green,white);background:linear-gradient(to right, white,green,white); left:0px; top:0px;}
     15%   {background:fushia; left:0px; top:0px;}
-    30%  {background:radial-gradient(circle at center, blue,silver,blue); left:0px; top:30px}
-    45%  {background:linear-gradient(to bottom, orange,blue,orange); left:0px; top:30px}
+    30%  {background:-webkit-radial-gradient(center, circle, blue,silver,blue);background:radial-gradient(circle at center, blue,silver,blue); left:0px; top:30px}
+    45%  {background:-webkit-gradient(linear, left top, left bottom, from(orange),color-stop(blue),to(orange));background:-webkit-linear-gradient(top, orange,blue,orange);background:linear-gradient(to bottom, orange,blue,orange); left:0px; top:30px}
     70%  {background:black; left:0px; top:30px}
-    100%  {background:radial-gradient(circle at center, tan,blue,tan); left:0px; top:0px;}
+    100%  {background:-webkit-radial-gradient(center, circle, tan,blue,tan);background:radial-gradient(circle at center, tan,blue,tan); left:0px; top:0px;}
+}
+@keyframes home {
+    0%   {background:-webkit-gradient(linear, left top, right top, from(white),color-stop(green),to(white));background:-webkit-linear-gradient(left, white,green,white);background:-o-linear-gradient(left, white,green,white);background:linear-gradient(to right, white,green,white); left:0px; top:0px;}
+    15%   {background:fushia; left:0px; top:0px;}
+    30%  {background:-webkit-radial-gradient(center, circle, blue,silver,blue);background:-o-radial-gradient(center, circle, blue,silver,blue);background:radial-gradient(circle at center, blue,silver,blue); left:0px; top:30px}
+    45%  {background:-webkit-gradient(linear, left top, left bottom, from(orange),color-stop(blue),to(orange));background:-webkit-linear-gradient(top, orange,blue,orange);background:-o-linear-gradient(top, orange,blue,orange);background:linear-gradient(to bottom, orange,blue,orange); left:0px; top:30px}
+    70%  {background:black; left:0px; top:30px}
+    100%  {background:-webkit-radial-gradient(center, circle, tan,blue,tan);background:-o-radial-gradient(center, circle, tan,blue,tan);background:radial-gradient(circle at center, tan,blue,tan); left:0px; top:0px;}
 }
 /*les autres liens du header*/
 header  a:not(.home) {
@@ -242,6 +192,14 @@ header a:hover:not(.home) {
   border-bottom:10px solid rgba(28,100,128,0.6);
   text-decoration: none;
   
+ }
+ #spanClignotante{
+     background-color:black; 
+     visibility:visible; 
+     color:white; 
+     text-align:right; 
+     font-size:15px; 
+     
  }
 /*---Effet sur les liens a ----(l'ordre: a:hover peut venir après a:link and a:visited in the CSS definition in order to be effective! a:active MUST come after a:hover in the CSS definition in order to be effective! Pseudo-class names are not case-sensitive.)*/
 
@@ -340,7 +298,12 @@ section {
   border-radius: 30px;
   box-shadow: 0 9px #999;
 }
-
+section  a{
+  display:inline-block;
+  padding:2px;
+  text-decoration:none;
+  font-family:"Indie flower",cursive;
+}
 section button:hover{
 background:radial-gradient(circle at center,gray,tan,white); /* #3e8e41;*/
 color:white;
@@ -356,11 +319,7 @@ color:white;
   transform:translateY(4px);
   outline:none;
 }*/
-section button a{
-  display:inline-block;
-  padding:5px;
-  font-family:"Indie flower",cursive;
-}
+
  /*les icones colorés à côté des titres de langages de la page home*/
 span.icone_langage {
 float:left;
@@ -482,14 +441,14 @@ border:5px solid olive;
     padding: 15px;
     margin-top:15px;
     font-family: fantasy;
-    color:white; coral;
+    color:white; /*coral;*/
     /*font-family:'Lobster','Dancing Script','Abril Fatface', cursive;*/
     text-align: center;
     letter-spacing:2px;
     line-height:1.5;
     cursor:default;
     /*color:blueviolet;*/
-    background:#1d2d3e; bisque;
+    background:#1d2d3e; /*bisque;*/
     word-wrap: break-word;
     border:1px solid white; border-radius:10px;
     font: bold  blueviolet; /*si je rajoute la taille dans le font ma font-family quelques lignes plus n'aura plus d'effets*/
@@ -513,20 +472,21 @@ border:5px solid olive;
    footer{
   /*display:table-row;*/
   height:auto;
-  background-color:#dedede; #f2f2f2; #1d1d1b; #f1f1f1; #939591=939591=lightslategray; #353b47; #313131; #cbc7bf; #8c8c8c;
+  background-color:#dedede; /*#f2f2f2; #1d1d1b; #f1f1f1; #939591=939591=lightslategray; #353b47; #313131; #cbc7bf; #8c8c8c;*/
   color:white;
   padding:40px;
   min-width:100%;
   margin-top:20px;
   font-size:1.8em;
   font-weight:bold;
+  list-style-type:none;
 }
    footer .row {
 min-width:100%;
 margin:0 auto;}
   .imgfooter {
 height:20px;
-text-align:right;
+text-align:center;
 padding:5px;
 }
   footer ul {
@@ -536,15 +496,18 @@ margin:0;
 padding:20px;
 text-align:center;
 }
-
+footer ul li {
+    list-style-type:none;
+    height:50px;
+}
   footer ul li a {
-display:block;
+display:inline-block;
 color:#46404c;
 font-size:17px;
 height:60px;
 text-align:right;
 text-decoration:none; 
-margin-right:10px;                                        
+margin-right:10px;   
 }
 .footerdiv a {
 font-family:'Lobster','Dancing+Script',cursive;
