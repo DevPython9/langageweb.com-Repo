@@ -30,10 +30,10 @@
         <link rel="stylesheet" type="text/css" media="all" href="css/knass.css" />
         <!--Lien vers fichier Bootstrap.min.css-->
         <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-        <!--Lien vers feuille de style.css-->
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <!--Lien vers feuille de style.css mis entre des balises 'script' avec du js pour faire en sorte que le navigateur n'interroge plus le cache à ce niveau. Donc toutes modifications de la feuille de style sera repercuté instantanément-->
+        <script>document.write('<link rel="stylesheet" type="text/css" href="style.css?dev=' + Math.floor(Math.random() * 100) + '"\><\/script>');</script>
         <!-- media queries: Pour ceux qui ont une résolution inférieure à 980px-->
-        <link rel="stylesheet" media="screen and (max-width: 980px)" href="mediaqueries.css" />
+        <link rel="stylesheet" media="screen and (max-width: 980px)" href="" />
         <!--Lien vers jquery3.2.1-->
         <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
         <link rel="stylesheet" href="YouTubePopUp.css">
@@ -43,8 +43,13 @@
         <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
         <!--Lien pour Icones google-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
-        <!--Favicon -->
+        <!--Favicon : En passanrt par un générateur de favicon .ico, après avoir uploader votre favicon sur la plateforme de générateur, suivez ces étapes:
+           >>>Téléchargez le favicon généré .ico  et enregistrez-le dans le répertoire racine de votre site chez votre hébergeur. Ensuite, incluez le code suivant dans la tête de votre document HTML.
+                 <link  rel = "icône de raccourci"  href = "/favicon.ico"  type = "image / x-icon" > 
+                 <lien  rel = "icône"  href = "/favicon.ico"  type = "image / x-icon" >
+                 Et le tour est joué!-->
         <?php include'favicon.php';?>
+        <!--------------END Favicon--------------------------- -->
         <!--La balise <title> correspond au titre de votre page web. Il s’agit d’un champ essentiel à ne pas négliger dans le cadre d’une bonne stratégie d’optimisation du référencement naturel puisqu’elle est l’un des critères les plus importants pour les moteurs de recherche (Google, Bing...)
             Le contenu de la balise <title> d’une page web apparaît dans la partie supérieure de la fenêtre de navigation ainsi que dans le nom des onglets. Note: placez les balises title et meta description juste avant </head> et la balise title au dessus de meta desc. Pour +d'info voir: https://www.yakaferci.com/balise-title/-->
 	    <title>Accueil:tutoriels sur les langages web</title>
@@ -76,7 +81,7 @@
     <i class="material-icons">&#xE195;</i>
    <h3>Survolez le menu du haut pour accéder directement aux cours vidéos</h3>
    <span class="chaine-animee">Un bon Site est toU<img src="sep_anim.gif" align="center";>Jours en Construction!</span>
-    <h3 class="titre2">Voici les 3 principaux langages à appendre absolument! </h3>
+    <h3 class="titre2">Voici les 3 principaux langages à apprendre absolument! </h3>
     <!-- For modern browsers. --> 
       <i class="material-icons icone_silhouette">directions_run</i> 
       <i class="material-icons icone_silhouette">directions_run</i>
@@ -122,7 +127,6 @@
              <h1 id="javascript">Les bases de JavaScript</h1>
             <p>JavaScript est un langage de programmation qui permet de rendre un site web interactif (par exemple pour réaliser des jeux, afficher des réponses de façon dynamique lorsque l'utilisateur clique sur un bouton ou saisit des données, animer la page). Avec ces tuto, vous serez en mesure d'utiliser le bases de ce langage et de réaliser ce qu'il est possible de faire avec JavaScript...<button class="btn_html"><a href="javascript.php">Apprendre plus en vidéos</a></button> </p>
            </section> 
-            
 </div>
 </div>
 <footer>
@@ -132,5 +136,6 @@
 <script>
 jQuery("a.demo").YouTubePopUp({ autoplay: 0 });
 </script>
+
 </body>
 </html>
