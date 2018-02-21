@@ -1,0 +1,168 @@
+/***
+Pour tous les types d'écrans, si la largeur de la fenêtre ne dépasse pas 980 px, alors exécuter les règles CSS suivantes 
+***/
+ /*@media all and (max-width: 400px){
+     .bloc_langage {
+   display:none;
+}
+aside {
+    display:none;
+}
+div.item{
+    width:70%;
+}
+}
+ 
+ @media all and (max-width: 700px){
+   .bloc_langage {
+   display:none;
+}
+aside {
+    display:none;
+}
+div.item{
+    width:70%;
+}
+}
+
+ @media all and (max-width: 980px) {
+     .wrapper {
+       width:auto;
+     }
+     header{
+       width:auto;
+       text-align:left;
+}
+
+    header li {
+       display:block; /*?
+ }
+    header li a{
+  padding:6px; 
+}
+ .logo {
+display:none;
+}
+.material-icons {
+  display:none;
+}
+div.wrapper h3 {
+  display:none;
+}
+.chaine-animee //si je met le prefix span.caine-animee ca met sort un avertissement: span is overqualified...
+{
+   display:none;
+}
+
+  aside {
+    display:none;
+}
+.bloc_langage li {
+width:auto;
+}
+//video 
+.item {
+    width:100%;
+}
+
+ .bloc_langage li a {
+display:block;
+color:white; 
+text-decoration: none;
+font-family:'Courgette', cursive;
+}
+footer {
+width:auto;
+background:linear-gradient(to bottom,blue,white);
+}
+footer .row {
+display:none;
+}
+  }*/
+  
+  /* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-width : 320px)
+and (max-width : 480px) {
+ .bloc_langage {
+   display:none;
+}
+aside {
+    display:none;
+}
+div.item{
+    width:70%;
+}
+
+}
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+ .bloc_langage {
+   display:none;
+}
+aside {
+    display:none;
+}
+div.item{
+    width:70%;
+}
+}
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+ .bloc_langage {
+   display:none;
+}
+aside {
+    display:none;
+}
+div.item{
+    width:70%;
+}
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-width : 768px)
+and (max-width : 1024px) {
+/* Styles */
+}
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-width : 768px)
+and (max-width : 1024px)
+and (orientation : landscape) {
+/* Styles */
+}
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-width : 768px)
+and (max-width : 1024px)
+and (orientation : portrait) {
+.bloc_langage {
+   display:none;
+}
+aside {
+    display:none;
+}
+div.item{
+    width:48%;
+}
+}
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+/* Styles */
+}
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* Styles */
+}
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
+ 
