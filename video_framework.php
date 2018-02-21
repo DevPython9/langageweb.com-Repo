@@ -90,6 +90,13 @@
  <hr/> <a class="description">Compiler ses SCSS avec libSASS et gulp</a> 
  </div>
  <div class="item well">
+<<<<<<< HEAD
+   <a class="demo" width:"100%" href="https://www.youtube.com/watch?v=bTLB-FA_duE?rel=0"> <img src="framework.jpg"></a>
+ <hr/> <a class="description">Ajax..Comment ça marche?</a> 
+ </div>
+ <div class="item well">
+=======
+>>>>>>> 3101d158d1e57f757372bfe36a63dbafa02abd80
  <a class="demo" width:"100%" href="https://www.youtube.com/watch?v=bw9mcYawtuk?rel=0"> <img src="framework.jpg"></a>
  <hr/> <a class="description">CSS Maintenable avec SASS et Compass - Différence entre SCSS et SASS</a>  
  </div>
@@ -259,4 +266,9 @@ LWS - Hébergement et Noms de domaine en France
 </a>
  </div>
 </div>';
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> 3101d158d1e57f757372bfe36a63dbafa02abd80
+
