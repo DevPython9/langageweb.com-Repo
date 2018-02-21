@@ -4,4 +4,8 @@ log.txt
 *.txt
 #tous les fichiers caches
 cache/*
+/.app.php.swp
+  /images-icones..de mon site/favicon/
+
+
 
